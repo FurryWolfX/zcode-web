@@ -1,0 +1,22 @@
+{
+  "name": "zcode-web",
+  "version": "1.0.0",
+  "description": "zcode web",
+  "author": "wolfx",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "nuxt": "^2.11.0"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.149",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0"
+  }
+}
