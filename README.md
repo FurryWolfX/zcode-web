@@ -40,3 +40,4 @@ zcode-web/
 - `npm run generate` 产物在 `.output/public/`：SPA 模式自动生成 `200.html` 回退页，`public/.nojekyll` 防止 Jekyll 忽略 `_nuxt/` 目录
 - **TS 陷阱**: Nuxt 默认开启 `noUncheckedIndexedAccess`，数组/对象索引访问返回 `T | undefined`，需要显式判空（如 `dataKeys[i] ?? null`）；`ref` 的 `.value` 在表达式中不会被窄化，先解构到局部变量再判断
 - **vue-router 需顶层安装**: Nuxt 4 用 vue-router 5，默认嵌套在 `nuxt/node_modules` 下，vue-tsc 解析 `vue-router/volar/sfc-route-blocks` 会失败，需显式 `npm i -D vue-router` 提升到顶层
+- **TypeScript 用 5.x，不要升 7.x**: TS 7（原生编译器）虽已发布，但 vue-tsc 3.3.9（latest）尚未适配，`nuxt typecheck` 报 `ERR_PACKAGE_PATH_NOT_EXPORTED`；待 vue-tsc 支持后再升级
