@@ -4,19 +4,21 @@
   "description": "zcode web",
   "author": "wolfx",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "nuxt",
+    "dev": "nuxt dev",
     "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "typecheck": "nuxt typecheck"
   },
   "dependencies": {
-    "lodash": "^4.17.19",
-    "nuxt": "^2.11.0"
+    "nuxt": "^4.5.1"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.149",
-    "less": "^3.10.3",
-    "less-loader": "^5.0.0"
+    "typescript": "^5.9.0",
+    "vue-router": "^5.2.0",
+    "vue-tsc": "^3.3.9"
   }
 }

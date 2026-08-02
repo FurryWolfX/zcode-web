@@ -1,4 +1,4 @@
-const data = {
+const data: Record<string, string> = {
   一: "a",
   地: "b",
   现: "c",
