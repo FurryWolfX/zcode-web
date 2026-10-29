@@ -1,8 +1,10 @@
 # 项目档案
 
+zcode-web 是郑码输入法的简码练习页。页面随机出一个汉字，你敲出它的郑码一/二级简码，回车判定。只收录 363 个简码字，不含全码、词组和候选词。
+
 ## 基本信息
 - **项目名称**: zcode-web
-- **项目类型**: Vite 8 + Vue 3 单页应用（字库简码练习工具）
+- **项目类型**: Vite 8 + Vue 3 单页应用（郑码简码练习 Web 版）
 
 ## 技术栈
 - **主要语言**: TypeScript（Vue 3 / `<script setup>`）
@@ -19,7 +21,7 @@ zcode-web/
 │   ├── main.ts         # createApp 挂载到 #app
 │   ├── App.vue         # 主页面
 │   └── assets/
-│       └── data.ts     # 一/二级简码字符映射表（Record<string, string>）
+│       └── data.ts     # 郑码一/二级简码映射表，汉字到编码（Record<string, string>）
 ├── public/             # 原样复制到构建产物根目录（favicon.ico、.nojekyll）
 ├── vite.config.ts      # base、插件、dev/preview 端口
 ├── tsconfig.json       # 应用与 vite.config.ts 共用
@@ -29,7 +31,7 @@ zcode-web/
 ## 入口文件
 - **主入口**: `index.html` → `src/main.ts` → `src/App.vue`，无路由的 SPA
 
-页面随机显示一个字库汉字，你输入对应拼音简码后回车判定，答对换字、答错提示正确简码。
+练习逻辑都在 `src/App.vue`：随机出字、比对输入、答错时显示正确编码。
 
 ## 开发规范
 - **代码规范**: TypeScript strict，含 `noUncheckedIndexedAccess`、`noUnusedLocals`、`verbatimModuleSyntax`
