@@ -16,7 +16,7 @@
 
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, ref } from "vue";
-import data from "~/assets/data";
+import data from "./assets/data";
 
 const dataKeys = Object.keys(data);
 const currentWordSpell = ref("");
